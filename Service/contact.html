@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Open+Sans&family=Playfair+Display&family=Poppins:ital,wght@0,400;0,500;1,500&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../IMG/web-logo.png">
+    <title>Vortex News</title>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+</head>
+
+<body>
+    <!--Menu Bar After Clicking The Menu Button-->
+    <div id="side-menu" class="fixed top-0 left-[-250px] w-[240px] h-screen z-50 bg-black p-5
+    flex flex-col space-y-5 text-white duration-300">
+        <a href="javascript:void(0)" class="text-right text-4xl" onclick="closeMenu()">&times;</a>
+        <form>
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search"
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search">
+            </div>
+        </form>
+        <a class="hover:text-zinc-500" href="../index.html">Home</a>
+        <a class="hover:text-emerald-500" href="../Category/health.html">Health</a>
+        <a class="hover:text-indigo-500" href="../Category/politics.html">Politics</a>
+        <a class="hover:text-amber-500" href="../Category/politics.html">Technology</a>
+        <a class="hover:text-zinc-500" href="subscribe.html">Subscribe</a>
+
+    </div>
+
+    <!--Header-->
+    <header class="bg-black text-white p-4 md:px-48 lg:px-20 xl:px-48 flex items-center">
+        <div class="p-2 pl-7 mr-3" id="toggleBtn">
+            <img class="h-min w-5 select-none" onclick="openMenu()" src="../IMG/menu-btn.png" alt="">
+        </div>
+        <a href="index.html">
+            <h1 class="hidden lg:block text-3xl font-semibold pr-2 select-none">VX</h1>
+            <h1 class="block lg:hidden text-2xl selcet-none font-semibold pr-2">Vortex | News</h1>
+        </a>
+        <nav class="container p-2 hidden lg:block">
+            <div class="container mx-2">
+                <ul class="flex space-x-3 lg:space-x-8">
+                    <li><a href="../index.html"
+                            class="hover:underline decoration-2 decoration-emerald-600">Home</a>
+                    </li>
+                    <li><a href="../Category/health.html"
+                            class="hover:underline decoration-2 decoration-emerald-600">Health</a>
+                    </li>
+                    <li><a href="../Category/politics.html"
+                            class="hover:underline decoration-2 decoration-indigo-600">Politics</a>
+                    </li>
+                    <li><a href="../Category/technology.html"
+                            class="hover:underline decoration-2 decoration-amber-600">Technology</a></li>
+                    <li><a href="contact.html" class="underline decoration-2">Contact Us</a></li>
+                    <li><a href="subscribe.html" class="hover:underline decoration-2">Subscribe</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main Content-->
+    <main class="container mt-4 lg:mt-12 mx-auto px-6 pt-5 xl:px-52 lg:mb-28 grid grid-cols-1 lg:grid-cols-3 lg:gap-10">
+
+        <!--Contact Us-->
+        <div class="col-span-2 lg:pr-5">
+            <h1 class="text-4xl lg:text-7xl">Contact Us</h1>
+            <form action="javascript:void(0);" method="post" class="mt-8" onsubmit="submitForm(event)">
+                <div class="mb-4 flex flex-col lg:flex-row gap-5 lg:gap-10">
+                  <label for="name" class="flex flex-col block text-base font-medium text-gray-600">First Name* <input type="text" id="firstName" name="name" class="mt-1 p-2 border-2 border-zinc-700 rounded-sm" required></label>
+                  <label for="name" class="flex flex-col block text-base font-medium text-gray-600">Last Name <input type="text" id="lastName" name="name" class="mt-1 p-2 border-2 border-zinc-700 rounded-sm"></label>
+                  
+                </div>
+        
+                <div class="mb-4">
+                  <label for="email" class="block text-base font-medium text-gray-600">Email*</label>
+                  <input type="email" id="email" name="email" class="mt-1 p-2 w-full border-2 border-zinc-700 rounded-sm" required>
+                </div>
+        
+                <div class="mb-4">
+                  <label for="message" class="block text-base font-medium text-gray-600">What can we help you with?
+                  </label>
+                  <textarea id="message" name="message" rows="4" class="mt-1 p-2 w-full border-2 border-zinc-700 rounded-sm" required></textarea>
+                </div>
+                <p class="hidden pb-4 italic duration-300" id="subm-txt">Submission successful!</p>
+                <button type="submit" class="border-2 border-black bg-white p-2 rounded-sm duration-500 hover:bg-black hover:text-white">Submit</button>
+              </form>
+        </div>
+
+        <!--Trending Now Posts-->
+        <div class="flex flex-col gap-5"> 
+            <div class="flex items-center mt-4 lg:mt-0">
+                <span class="mb-4 p-3 border-2 border-black">Trending Now</span>
+            </div>
+            <a href="./Article Pages/news-article.html">
+                <div class="flex justify-between">
+                    <div class="">
+                        <span class="text-base lg:text-lg  hover:underline">Memory photos that are taken in
+                            nature</span>
+                        <p class="text-sm  text-zinc-500">BY LOE RAINBOW, CHLOE RACHEL</p>
+                    </div>
+                    <img class="h-20 w-min object-cover"
+                        src="https://images.pexels.com/photos/2224220/pexels-photo-2224220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
+                </div>
+            </a>
+
+            <hr>
+            <a href="./Article Pages/news-article.html">
+                <div class="flex justify-between">
+                    <div class="">
+                        <span class="text-base lg:text-lg hover:underline">Best Cookbooks of 2023 (So
+                            Far)</span>
+                        <p class="text-sm text-zinc-500">BY ALISSA PECKINS, CHLOE RACHEL, FLOWER DAISY
+                        </p>
+                    </div>
+                    <img class="h-20 w-min"
+                        src="https://images.pexels.com/photos/3298593/pexels-photo-3298593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
+                </div>
+            </a>
+
+            <hr>
+            <a href="./Article Pages/news-article.html">
+                <div class="flex justify-between">
+                    <div class="">
+                        <span class="text-base lg:text-lg hover:underline">Wegovy Slashes the Risk of Heart
+                            Attack and Stroke in a Landmark Trial</span>
+                        <p class="text-sm text-zinc-500">BY LOE RAINBOW, CHLOE RACHEL</p>
+                    </div>
+                    <img class="h-20 w-min"
+                        src="https://images.pexels.com/photos/3549948/pexels-photo-3549948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
+                </div>
+            </a>
+
+            <hr>
+        </div>
+
+    </main>
+
+    <!--Footer-->
+    <div class="grid items-center gap-5 mt-10 px-8 pt-4 bg-black md:px-48 lg:px-20 xl:px-52 h-[100vh]">
+        <div class="flex flex-col lg:flex-row container">
+            <div class="basis-1/2 flex flex-col lg:items-start gap-4 text-white">
+                <p class="text-xl lg:text-4xl mb-5 font-bold">VX | Vortex</p>
+                <p class="text-gray-400">Phone</p>
+                <a href="tel:+97675555555" class="underline pb-2 hover:text-zinc-500">+(976)XXXXXXXX</a>
+                <p class="text-gray-400">Mail</p>
+                <a href="mailto:abatsaikhan546@example.com"
+                    class="underline pb-2 hover:text-zinc-500">example@gmail.com</a>
+                <p class="text-gray-400">Social Media</p>
+                <div class="flex gap-5 flex-row">
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/ig.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Instagram</span></a>
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/fb.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Facebook</span></a>
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/yt.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Youtube</span></a>
+                </div>
+                <div class="text-white flex flex-row gap-24 pt-3 container">
+                    <div>
+                        <h2 class="text-lg pb-3">Resources</h2>
+                        <div class="flex flex-col gap-2">
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Lorem</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Ipsum</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Dolor</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-lg pb-3">Useful Links</h2>
+                        <div class="flex flex-col gap-2">
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Sit</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Amet</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Consectetur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Copyright-->
+    <div class="text-center bg-black text-white">
+        <p class="pb-6 mmd:px-48 lg:px-20 xl:px-48">© 2023 Vortex News. All rights reserved.</p>
+    </div>
+    <script src="../JS/menu-bar.js"></script>
+
+</body>
+
+</html>

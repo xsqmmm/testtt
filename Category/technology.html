@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../IMG/web-logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Open+Sans&family=Playfair+Display&family=Poppins:ital,wght@0,400;0,500;1,500&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <title>Vortex | Tech</title>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+</head>
+
+<body>
+    <!--Menu Bar After Clicking The Menu Button-->
+    <div id="side-menu" class="fixed top-0 left-[-250px] w-[240px] h-screen z-50 bg-black p-5
+    flex flex-col space-y-5 text-white duration-300">
+        <a href="javascript:void(0)" class="text-right text-4xl" onclick="closeMenu()">&times;</a>
+        <form>
+            <label for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search"
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search" required>
+            </div>
+        </form>
+        <a class="hover:text-zinc-500" href="technology.html">Home</a>
+        <a class="hover:text-emerald-500" href="health.html">Health</a>
+        <a class="hover:text-indigo-500" href="politics.html">Politics</a>
+        <a class="hover:text-zinc-500" href="../Service/contact.html">Contant Us</a>
+        <a class="hover:text-zinc-500" href="../Service/subscribe.html">Subscribe</a>
+
+    </div>
+
+    <!--Header-->
+    <header class="bg-black text-white p-4 md:px-48 lg:px-20 xl:px-48 flex items-center">
+        <div class="p-2 pl-7 mr-3" id="toggleBtn">
+            <img class="h-5 w-5 object-cover select-none" onclick="openMenu()" src="../IMG/menu-btn.png" alt="">
+        </div>
+        <a href="../index.html">
+            <h1 class="hidden lg:block text-3xl font-semibold pr-2 select-none">VX</h1>
+            <h1 class="block lg:hidden text-2xl selcet-none font-semibold pr-2">Vortex | News</h1>
+        </a>
+        <nav class="container p-2 hidden lg:block">
+            <div class="container mx-2">
+                <ul class="flex space-x-3 lg:space-x-8">
+                    <li><a href="../index.html" class="hover:underline decoration-2 decoration-emerald-600">Home</a>
+                    </li>
+                    <li><a href="health.html" class="hover:underline decoration-2 decoration-emerald-600">Health</a>
+                    </li>
+                    <li><a href="politics.html" class="hover:underline decoration-2 decoration-indigo-600">Politics</a>
+                    </li>
+                    <li><a href="technology.html" class="underline decoration-2 decoration-amber-600">Technology</a>
+                    </li>
+                    <li><a href="../Service/contact.html" class="hover:underline decoration-2">Contact Us</a></li>
+                    <li><a href="../Service/subscribe.html" class="hover:underline decoration-2">Subscribe</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main Content-->
+    <main class="container mx-auto px-6 md:px-48 lg:px-20 xl:px-48">
+        <!--Today's Pick-->
+        <div>
+            <div class="flex mt-4 px-4">
+                <span class="mt-4 p-3 border-2 border-amber-600 ">Today's Picks</span>
+            </div>
+            <div class="p-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 h-full md:h-[500px]">
+                    <a href="../Article Pages/news-article.html"
+                        class="relative overflow-hidden col-span-2 row-span-1 md:col-span-1 md:row-span-2 group">
+                        <img class="object-cover w-full h-64 md:h-full md:w-full"
+                            src="https://images.pexels.com/photos/10554856/pexels-photo-10554856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Image 1">
+                        <div
+                            class="hidden lg:block absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <p class="text-lg">Robotic Putting Greens. Mixed Reality. Loud Spectators. This Is Golf?!
+                            </p>
+                        </div>
+                        <div class="block lg:hidden absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white">
+                            <p class="text-base tracking-wide">Robotic Putting Greens. Mixed Reality. Loud Spectators.
+                                This Is Golf?!</p>
+                        </div>
+                    </a>
+
+
+                    <a href="../Article Pages/news-article.html"
+                        class="relative overflow-hidden col-span-2 md:col-span-1 group">
+                        <img class="object-cover w-full h-48 md:h-full"
+                            src="https://images.pexels.com/photos/217250/pexels-photo-217250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Image 3">
+                        <div
+                            class="hidden lg:block absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <p class="text-lg">What to Do If You Get Emails for the Wrong Person</p>
+                        </div>
+                        <div class="block lg:hidden absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white">
+                            <p class="text-base tracking-wide">What to Do If You Get Emails for the Wrong Person</p>
+                        </div>
+                    </a>
+
+
+                    <a href="../Article Pages/news-article.html"
+                        class="relative overflow-hidden col-span-2 row-span-1 md:col-span-1 md:row-span-2 group">
+                        <img class="object-cover w-full h-64 md:h-full  "
+                            src="https://images.pexels.com/photos/11182884/pexels-photo-11182884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Image 4">
+                        <div
+                            class="hidden lg:block absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <p class="text-lg">Turn Boring Tap Water Into Tasty Mineral Water With This Countertop
+                                Dispenser</p>
+                        </div>
+                        <div class="block lg:hidden absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white">
+                            <p class="text-base tracking-wide">Turn Boring Tap Water Into Tasty Mineral Water With This
+                                Countertop Dispenser</p>
+                        </div>
+                    </a>
+
+
+                    <a href="../Article Pages/news-article.html"
+                        class="relative overflow-hidden col-span-2 md:col-span-1 group">
+                        <img class="object-cover w-full h-48 md:h-full"
+                            src="https://images.pexels.com/photos/912587/pexels-photo-912587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Image 5">
+                        <div
+                            class="hidden lg:block absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <p class="text-lg">The Milky Way’s Stars Reveal Its Turbulent Past</p>
+                        </div>
+                        <div class="block lg:hidden absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white">
+                            <p class="text-base tracking-wide">The Milky Way’s Stars Reveal Its Turbulent Past</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Latest News-->
+        <div>
+            <div class="flex mt-20 px-4">
+                <span class="my-4 p-3 border-2 border-amber-600 ">Latest News</span>
+            </div>
+            <a href="../Article Pages/news-article.html" class="container flex flex-col lg:flex-row gap-10 px-4">
+                <img class="lg:h-min lg:w-[50%]"
+                    src="https://images.pexels.com/photos/18906748/pexels-photo-18906748/free-photo-of-lightning-on-earth.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h1 class="text-xl lg:text-5xl pb-2 font-bold hover:underline">This New Tool Aims to Keep
+                            Terrorism Content Off the Internet</h1>
+                        <span class="text-sm lg:text-lg">Chris Robert</span>
+                    </div>
+
+                    <p class="text-base lg:text-xl text-zinc-500 pt-4">Omegle connected strangers to one another and had
+                        a long-standing problem of pairing minors with sexual predators. A legal settlement took it
+                        down.</p>
+                </div>
+            </a>
+            <div class="flex items-center mt-4 px-4">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="container grid lg:grid-cols-3 px-6 mt-6 gap-5">
+                <a href="../Article Pages/news-article.html">
+                    <div class="flex justify-between">
+                        <div class="mr-6">
+                            <p class="text-sm lg:text-base  mb-2">FOURTH AMENDMENT</p>
+                            <span class="text-base lg:text-lg font-bold hover:underline">A New US Privacy Bill</span>
+
+                        </div>
+                        <img class="h-28 w-28 object-cover"
+                            src="https://images.pexels.com/photos/18943951/pexels-photo-18943951/free-photo-of-moon-on-night-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="flex justify-between">
+                        <div class="mr-6">
+                            <p class="text-sm lg:text-base  mb-2">MISSING CONNECTIONS</p>
+                            <span class="text-base lg:text-lg font-bold hover:underline">Internet Blackouts in
+                                Gaza</span>
+
+                        </div>
+                        <img class="h-28 w-28 object-cover"
+                            src="https://images.pexels.com/photos/19017576/pexels-photo-19017576/free-photo-of-sunflowers-photograpy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="flex justify-between">
+                        <div class="mr-6">
+                            <p class="text-sm lg:text-base mb-2">WOLF PACK</p>
+                            <span class="text-base lg:text-lg font-bold hover:underline">Intensified Israeli
+                                Surveillance </span>
+                        </div>
+                        <img class="h-28 w-28 object-cover"
+                            src="https://images.pexels.com/photos/6953365/pexels-photo-6953365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="flex items-center mt-4 px-4 mb-32">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+        </div>
+
+        <!--This Week-->
+        <div>
+            <!--Name-->
+            <div class="flex mt-4 px-4">
+                <span class="my-4 p-3 border-2 border-amber-600 ">This Week</span>
+            </div>
+            <!--News Card container-->
+            <section class="grid grid-cols-1 lg:grid-cols-5 gap-6 px-4 mb-20">
+                <!--News Cards goes here-->
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white py-4">
+                        <img class=""
+                            src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-amber-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Gaming</div>
+                        <h2 class="text-lg mb-2 mt-2 hover:underline">Valve reveals the Steam Deck OLED: $549 buys
+                            better screen, battery, and more</h2>
+                        <p class="text-sm text-zinc-500">BY SEAN HOLLISTER</p>
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white py-4">
+                        <img src="https://images.pexels.com/photos/1346154/pexels-photo-1346154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-amber-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Sony</div>
+                        <h2 class="text-lg mb-2 mt-2 hover:underline">Sony’s new ‘slim’ PlayStation 5 is smaller but
+                            also weirder</h2>
+                        <p class="text-sm text-zinc-500">BY BROWN BUKOWSKI</p>
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white py-4">
+                        <img src="https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-amber-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Apple</div>
+                        <h2 class="text-lg  mb-2 mt-2 hover:underline">Apple MacBook Pro 16 M3 Max review</h2>
+                        <p class="text-sm text-zinc-500">BY ANTONIO BENEDICTO</p>
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white py-4">
+                        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-amber-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Applications</div>
+                        <h2 class="text-lg  mb-2 mt-2 hover:underline">Mint is going away, but these easy budgeting apps
+                            can take its place</h2>
+                        <p class="text-sm text-zinc-500">BY BARBARA KRASNOFF</p>
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white py-4">
+                        <img src="https://images.pexels.com/photos/8853500/pexels-photo-8853500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-amber-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Renewable Energy</div>
+                        <h2 class="text-lg  mb-2 mt-2 hover:underline">Redwood Materials will recycle stationary storage
+                            batteries as it expands its scope</h2>
+                        <p class="text-sm text-zinc-500">BY WES DAVIS</p>
+                    </div>
+                </a>
+            </section>
+        </div>
+
+        <!--Pages 1,2-->
+        <div class="order-2 flex gap-3 mx-auto w-min">
+            <div
+                class="border-2 border-black text-white bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10">
+                1</div>
+            <div
+                class="border-2 border-black hover:text-white hover:bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10">
+                2</div>
+            <div
+                class="border-2 border-black hover:text-white hover:bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10">
+                3</div>
+            <div
+                class="border-2 border-black hover:text-white hover:bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10 text-xl">
+                →</div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <div class="grid items-center gap-5 mt-10 px-8 pt-4 bg-black md:px-48 lg:px-20 xl:px-52 h-[100vh]">
+        <div class="flex flex-col lg:flex-row container">
+            <div class="basis-1/2 flex flex-col lg:items-start gap-4 text-white">
+                <p class="text-xl lg:text-4xl mb-5 font-bold">VX | Vortex</p>
+                <p class="text-gray-400">Phone</p>
+                <a href="tel:+97675555555" class="underline pb-2 hover:text-zinc-500">+(976)XXXXXXXX</a>
+                <p class="text-gray-400">Mail</p>
+                <a href="mailto:abatsaikhan546@example.com"
+                    class="underline pb-2 hover:text-zinc-500">example@gmail.com</a>
+                <p class="text-gray-400">Social Media</p>
+                <div class="flex gap-5 flex-row">
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/ig.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Instagram</span></a>
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/fb.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Facebook</span></a>
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/yt.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Youtube</span></a>
+                </div>
+                <div class="text-white flex flex-row gap-24 pt-3 container">
+                    <div>
+                        <h2 class="text-lg pb-3">Resources</h2>
+                        <div class="flex flex-col gap-2">
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Lorem</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Ipsum</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Dolor</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-lg pb-3">Useful Links</h2>
+                        <div class="flex flex-col gap-2">
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Sit</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Amet</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Consectetur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Copyright-->
+    <div class="text-center bg-black text-white">
+        <p class="pb-6 mmd:px-48 lg:px-20 xl:px-48">© 2023 Vortex News. All rights reserved.</p>
+    </div>
+    <script src="../JS/menu-bar.js"></script>
+
+</body>
+
+</html>

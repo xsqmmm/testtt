@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../IMG/web-logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Open+Sans&family=Playfair+Display&family=Poppins:ital,wght@0,400;0,500;1,500&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <title>Vortex | Health</title>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Menu Bar After Clicking The Menu Button-->
+    <div id="side-menu" class="fixed top-0 left-[-250px] w-[240px] h-screen z-50 bg-black p-5
+    flex flex-col space-y-5 text-white duration-300">
+        <a href="javascript:void(0)" class="text-right text-4xl" onclick="closeMenu()">&times;</a>
+        <form>
+            <label for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search"
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search" required>
+            </div>
+        </form>
+        <a class="hover:text-zinc-500" href="../index.html">Home</a>
+        <a class="hover:text-indigo-500" href="politics.html">Politics</a>
+        <a class="hover:text-amber-500" href="technology.html">Technology</a>
+        <a class="hover:text-zinc-500" href="../Service/contact.html">Contant Us</a>
+        <a class="hover:text-zinc-500" href="../Service/subscribe.html">Subscribe</a>
+
+    </div>
+
+    <!--Header-->
+    <header class="bg-black text-white p-4 md:px-48 lg:px-20 xl:px-48 flex items-center">
+        <div class="p-2 pl-7 mr-3" id="toggleBtn">
+            <img class="h-5 w-5 object-cover select-none" onclick="openMenu()" src="../IMG/menu-btn.png" alt="">
+        </div>
+        <a href="../index.html">
+            <h1 class="hidden lg:block text-3xl font-semibold pr-2 select-none">VX</h1>
+            <h1 class="block lg:hidden text-2xl selcet-none font-semibold pr-2">Vortex | News</h1>
+        </a>
+        <nav class="container p-2 hidden lg:block">
+            <div class="container mx-2">
+                <ul class="flex space-x-3 lg:space-x-8">
+                    <li><a href="../index.html" class="hover:underline decoration-2">Home</a>
+                    </li>
+                    <li><a href="health.html" class="underline decoration-2 decoration-emerald-600">Health</a>
+                    </li>
+                    <li><a href="politics.html" class="hover:underline decoration-2 decoration-indigo-600">Politics</a>
+                    </li>
+                    <li><a href="technology.html"
+                            class="hover:underline decoration-2 decoration-amber-600">Technology</a></li>
+                    <li><a href="../Service/contact.html" class="hover:underline decoration-2">Contact Us</a></li>
+                    <li><a href="../Service/subscribe.html" class="hover:underline decoration-2">Subscribe</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main Content-->
+    <main class="container mx-auto p-4 xl:px-48">
+        <!--Latest News-->
+        <div>
+            <div class="flex items-center mt-4 px-6">
+                <span class="my-4 p-3 border-2 border-emerald-600">Latest news</span>
+            </div>
+            <a href="../Article Pages/news-article.html" class="container flex flex-col lg:flex-row gap-10 px-6">
+                <img class="lg:h-min lg:w-[50%]"
+                    src="https://images.pexels.com/photos/1390403/pexels-photo-1390403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h1 class="text-xl md:text-2xl xl:text-5xl pb-2 font-bold hover:underline">Running vs. Walking:
+                            Which Is Better for Lasting Health?</h1>
+                        <span class="text-sm lg:text-lg">Agatha Amber</span>
+                    </div>
+
+                    <p class="text-base lg:text-base xl:text-xl text-zinc-500 pt-4">They’re both beneficial physically
+                        and
+                        mentally, but there’s a clear winner. A legal settlement took it
+                        down.</p>
+                </div>
+            </a>
+            <div class="flex items-center mt-4 px-6">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="container grid lg:grid-cols-3 px-6 mt-6 gap-5">
+                <a href="../Article Pages/news-article.html">
+                    <div class="flex justify-between">
+                        <div class="mr-6">
+                            <p class="text-sm lg:text-base  mb-2">FOURTH AMENDMENT</p>
+                            <span class="text-base lg:text-lg font-bold hover:underline">A New US Privacy Bill</span>
+
+                        </div>
+                        <img class="h-28 w-28 object-cover"
+                            src="https://images.pexels.com/photos/18943951/pexels-photo-18943951/free-photo-of-moon-on-night-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="flex justify-between">
+                        <div class="mr-6">
+                            <p class="text-sm lg:text-base  mb-2">MISSING CONNECTIONS</p>
+                            <span class="text-base lg:text-lg font-bold hover:underline">Internet Blackouts in
+                                Gaza</span>
+
+                        </div>
+                        <img class="h-28 w-28 object-cover"
+                            src="https://images.pexels.com/photos/19017576/pexels-photo-19017576/free-photo-of-sunflowers-photograpy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="flex justify-between">
+                        <div class="mr-6">
+                            <p class="text-sm lg:text-base mb-2">WOLF PACK</p>
+                            <span class="text-base lg:text-lg font-bold hover:underline">Intensified Israeli
+                                Surveillance
+                            </span>
+                        </div>
+                        <img class="h-28 w-28 object-cover"
+                            src="https://images.pexels.com/photos/6953365/pexels-photo-6953365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="flex items-center mt-4 px-6 mb-20">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+        </div>
+
+
+        <!--Healthy Breakfasts of The Week-->
+        <div>
+            <!--Name-->
+            <div class="flex items-center mt-4 px-6">
+                <span class="my-4 text-black p-3 border-2 border-emerald-600">Healthy Breakfasts of The Week</span>
+            </div>
+            <!--Cards-->
+            <div class="container grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 mb-20">
+                <!--Recipe 1-->
+                <a href="../Article Pages/recipe-article.html">
+                    <div class="relative overflow-hidden  group">
+                        <img class="h-[350px] w-full object-cover"
+                            src="https://images.pexels.com/photos/4006362/pexels-photo-4006362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="hidden lg:block absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <p class="text-lg">Strawberry Granola</p>
+                        </div>
+                        <div class="block lg:hidden absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white">
+                            <p class="text-2xl tracking-wide">STRAWBERRY GRANOLA</p>
+                        </div>
+                    </div>
+                </a>
+                <!--Recipe 2-->
+                <a href="../Article Pages/recipe-article.html">
+                    <div class="group relative overflow-hidden ">
+                        <img class="h-[350px] w-full object-cover"
+                            src="https://images.pexels.com/photos/6823325/pexels-photo-6823325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="hidden lg:block absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <p class="text-lg">Kiwi Granola</p>
+                        </div>
+                        <div class="block lg:hidden absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white">
+                            <p class="text-2xl tracking-wide">KIWI GRANOLA</p>
+                        </div>
+                    </div>
+                </a>
+                <!--Recipe 3-->
+                <a href="../Article Pages/recipe-article.html">
+                    <div class="group relative overflow-hidden ">
+                        <img class="h-[350px] w-full object-cover"
+                            src="https://images.pexels.com/photos/11020402/pexels-photo-11020402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="hidden lg:block absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white transform translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <p class="text-lg">Wild Fruit Shake</p>
+                        </div>
+                        <div class="block lg:hidden absolute inset-x-0 bottom-0 p-4 bg-black bg-opacity-75 text-white">
+                            <p class="text-2xl tracking-wide">WILD FRUIT SHAKE</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!--Popular Now Posts-->
+        <div>
+            <!--Name-->
+            <div class="flex items-center mt-4 px-6">
+                <span class="my-4 text-black p-3 border-2 border-emerald-600">Popular Now</span>
+            </div>
+
+            <!--Posts-->
+            <section class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-6 mb-20">
+                <!-- News Cards go here -->
+                <a href="../Article Pages/news-article.html" class="flex">
+                    <div class="bg-white">
+                        <img class=""
+                            src="https://images.pexels.com/photos/5693043/pexels-photo-5693043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-emerald-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Medicine</div>
+                        <h2 class="text-lg mb-2 mt-2 hover:underline">Japan volcano: Plumes of smoke as new island
+                            emerges
+                            after eruption</h2>
+                        <p class="text-sm text-zinc-500 mb-2">Drone footage from Japan has captured a rare moment.</p>
+                        <p class="text-sm ">BY MIKE BRODER</p>
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white">
+                        <img class=""
+                            src="https://images.pexels.com/photos/235922/pexels-photo-235922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-emerald-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Fitness</div>
+                        <h2 class="text-lg mb-2 mt-2 hover:underline">Parkinson's implant restores man's ability to walk
+                            after eruption</h2>
+                        <p class="text-sm text-zinc-500 mb-2">Drone footage from Japan has captured a rare moment.</p>
+                        <p class="text-sm ">BY TSETSEG</p>
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white">
+                        <img class=""
+                            src="https://images.pexels.com/photos/806427/pexels-photo-806427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-emerald-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Drugs</div>
+                        <h2 class="text-lg mb-2 mt-2 hover:underline">Scientists: Allow forbidden 28-day embryo
+                            experiments
+                            after eruption</h2>
+                        <p class="text-sm text-zinc-500 mb-2">Drone footage from Japan has captured a rare moment.</p>
+                        <p class="text-sm ">BY KIM JIN SUNG</p>
+                    </div>
+                </a>
+                <a href="../Article Pages/news-article.html">
+                    <div class="bg-white">
+                        <img class=""
+                            src="https://images.pexels.com/photos/5928329/pexels-photo-5928329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div
+                            class="mt-4 border-emerald-600 text-sm font-['Montserrat'] font-bold inline-block border-2 p-1">
+                            Yoga</div>
+                        <h2 class="text-lg mb-2 mt-2 hover:underline">ADHD medication shortage: 'Life is horrendous'
+                        </h2>
+                        <p class="text-sm text-zinc-500 mb-2">Drone footage from Japan has captured a rare moment.</p>
+                        <p class="text-sm ">BY RAINBOW DASH</p>
+                    </div>
+                </a>
+
+            </section>
+        </div>
+
+        <!--Top 10 News-->
+        <div>
+            <!--Name-->
+        <div class="flex items-center mt-4 px-6">
+            <span class="my-4 text-black border-2 p-3 border-emerald-600">Top 10 News</span>
+        </div>
+
+        <!--Posts-->
+        <section class="grid lg:grid-cols-2 gap-8 px-6">
+            <div class="bg-whites py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">1. </span>Is Mouth
+                        Breathing Really That Bad?</h2>
+                    <p class="text-base hidden lg:block text-zinc-500">The human body has two passageways that supply
+                        air to the lungs—the
+                        mouth and the nose. While most
+                        healthy people use both their mouth and nose to breathe</p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/17139198/pexels-photo-17139198/free-photo-of-a-person-crossing-the-street-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+            </div>
+            <div class="flex items-center lg:hidden">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl  font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">2. </span>15
+                        Interesting Facts About The Human Body Infographic</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">These facts may help you appreciate your body
+                        even more.</p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/18963463/pexels-photo-18963463/free-photo-of-house-buildings-in-a-valley.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+            </div>
+            <div class="flex items-center lg:col-span-2">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">3. </span>Air-Fryer
+                        Roasted Salmon With Sautéed Balsamic Spinach</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">Make dinner a breeze with this quick air-fryer
+                        recipe.</p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/11967805/pexels-photo-11967805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+
+            </div>
+            <div class="flex items-center lg:hidden">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">4.
+                        </span>Prescription Benefits For Chronic Conditions</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">For our members with chronic conditions such as
+                        diabetes, asthma,
+                        and
+                        COPD, the cost of prescriptions
+                        can put stress on a household budget.</p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/14180108/pexels-photo-14180108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+            </div>
+            <div class="flex items-center lg:col-span-2">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">5. </span>7 Foods
+                        That Burn Belly Fat</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">Do you tend to gain weight around your middle?
+                        Try out these seven
+                        delicious foods to slim down and
+                        get healthier today.</p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/18906748/pexels-photo-18906748/free-photo-of-lightning-on-earth.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+
+            </div>
+            <div class="flex items-center lg:hidden">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">6. </span>Slow-Cooker
+                        Mediterranean Diet Stew</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">Made for those following the Mediterranean Diet,
+                        this stew will warm
+                        you
+                        up during colder evenings.
+                    </p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/2226190/pexels-photo-2226190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+
+            </div>
+            <div class="flex items-center lg:col-span-2">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">7. </span>The
+                        Differences Between Medicaid And Medicare</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">Medicare and Medicaid are government programs
+                        providing healthcare
+                        coverage to certain populations.
+                        Here’s an overview of who can benefit from the programs and the main differences between the
+                        two.
+                    </p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/18820159/pexels-photo-18820159/free-photo-of-winter-mountain.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 "
+                    alt="">
+
+            </div>
+            <div class="flex items-center lg:hidden">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">8. </span>10-Minute
+                        Healthy Tuna Melt Sandwich</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">Using Greek yogurt inside the sandwich instead of
+                        mayonnaise and
+                        adding
+                        more veggies help make this a
+                        healthy sandwich option.</p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+
+
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/18983602/pexels-photo-18983602/free-photo-of-a-group-of-people-standing-in-a-bar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+            </div>
+            <div class="flex items-center lg:col-span-2">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center lg:items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">9. </span>Quick
+                        Snacks Under 100 Calories</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">Watching your weight can be hard when the most
+                        convenient and appetizing
+                        snacks are packaged and
+                        processed foods like crackers, chips, and chocolate.</p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/1687149/pexels-photo-1687149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+            </div>
+            <div class="flex items-center lg:hidden">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+            <div class="bg-white py-4 flex justify-between items-center items-start">
+                <a href="../Article Pages/news-article.html" class="pr-4 lg:pr-8">
+                    <h2 class="text-lg lg:text-xl font-semibold mb-2 text-lime-700 hover:text-emerald-900"><span
+                            class="text-indigo-900">10. </span>Why Choose
+                        SelectHealth In Idaho?</h2>
+                    <p class="text-base text-zinc-500 hidden lg:block">Why choose SelectHealth for your health insurance
+                        needs in Idaho?
+                        SelectHealth is a non-profit
+                        company committed to providing affordable and innovative wellness solutions to individuals,
+                        families, and businesses. </p>
+                    <p class="text-sm my-2">BY KYLIE BROWN</p>
+                </a>
+                <img class="h-28 w-28 object-cover"
+                    src="https://images.pexels.com/photos/19081932/pexels-photo-19081932/free-photo-of-japan-wallpapers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+
+            </div>
+            <div class="flex items-center lg:col-span-2">
+                <span class="flex-grow border-b border-gray-400"></span>
+            </div>
+        </section>
+        </div>
+        
+
+        <!--Pages 1,2-->
+        <div class="order-2 flex gap-3 mx-auto w-min mt-10">
+            <div
+                class="border-2 border-black text-white bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10">
+                1</div>
+            <div
+                class="border-2 border-black hover:text-white hover:bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10">
+                2</div>
+            <div
+                class="border-2 border-black hover:text-white hover:bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10">
+                3</div>
+            <div
+                class="border-2 border-black hover:text-white hover:bg-black duration-300 cursor-pointer text-center grid items-center self-center h-10 w-10 text-xl">
+                →</div>
+        </div>
+
+    </main>
+
+    <!--Footer-->
+    <div class="grid items-center gap-5 mt-10 px-8 pt-4 bg-black md:px-48 lg:px-20 xl:px-52 h-[100vh]">
+        <div class="flex flex-col lg:flex-row container">
+            <div class="basis-1/2 flex flex-col lg:items-start gap-4 text-white">
+                <p class="text-xl lg:text-4xl mb-5 font-bold">VX | Vortex</p>
+                <p class="text-gray-400">Phone</p>
+                <a href="tel:+97675555555" class="underline pb-2 hover:text-zinc-500">+(976)XXXXXXXX</a>
+                <p class="text-gray-400">Mail</p>
+                <a href="mailto:abatsaikhan546@example.com"
+                    class="underline pb-2 hover:text-zinc-500">example@gmail.com</a>
+                <p class="text-gray-400">Social Media</p>
+                <div class="flex gap-5 flex-row">
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/ig.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Instagram</span></a>
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/fb.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Facebook</span></a>
+                    <a href="" target="_blank" class="flex text-white"><img class=" h-10 w-10 select-none"
+                            src="../IMG/yt.png" alt=""><span
+                            class="hidden lg:block px-6 self-center hover:text-zinc-500">Youtube</span></a>
+                </div>
+                <div class="text-white flex flex-row gap-24 pt-3 container">
+                    <div>
+                        <h2 class="text-lg pb-3">Resources</h2>
+                        <div class="flex flex-col gap-2">
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Lorem</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Ipsum</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Dolor</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-lg pb-3">Useful Links</h2>
+                        <div class="flex flex-col gap-2">
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Sit</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Amet</a>
+                            <a href="javascript:void(0)"
+                                class="text-zinc-500 hover:text-white duration-300 cursor-pointer">Consectetur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Copyright-->
+    <div class="text-center bg-black text-white">
+        <p class="pb-6 mmd:px-48 lg:px-20 xl:px-48">© 2023 Vortex News. All rights reserved.</p>
+    </div>
+    <script src="../JS/menu-bar.js"></script>
+</body>
+
+</html>

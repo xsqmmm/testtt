@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Open+Sans&family=Playfair+Display&family=Poppins:ital,wght@0,400;0,500;1,500&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../IMG/web-logo.png">
+    <title>Vortex | Sign Up</title>
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+</head>
+
+<body>
+    <main class="h-screen w-full grid lg:grid-cols-2 lg:items-center">
+        <img class="h-52 lg:h-screen w-full object-cover" src="../IMG/jelly.jpg" alt="">
+        <form class="w-3/4 mx-auto" id="sign-page">
+            <div class="w-full bg-white rounded p-6">
+
+                <!--Website Name & Logo-->
+                <div class="flex">
+                    <img class="h-20 w-20 object-cover pr-4" src="../IMG/web-logo.png" alt="">
+                    <div class="border-2 border-black my-4"></div>
+                    <h1 class="self-center ml-5 text-2xl font-bold">Vortex News</h1>
+                </div>
+
+                <!--Account Submition-->
+                <h1 class="text-xl lg:text-4xl py-6" id="sign-title">Create an account</h1>
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-700 text-base font-bold mb-2">Username</label>
+                    <input type="text" id="username" name="username" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div class="mb-4" id="mail">
+                    <label for="email" class="block text-gray-700 text-base font-bold mb-2">Gmail</label>
+                    <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700 text-base font-bold mb-2">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="w-full border border-gray-300 p-2 rounded" required>
+                </div>
+                <a href="payment.html"><button type="submit" class="bg-blue-500 text-white p-2 rounded container" id="btn-submit">Create Account</button></a>
+                
+                <!--Changing to Log in-->
+                <div class="text-center text-zinc-500 py-2" id="login">Already have an account?<span
+                        class="ml-2 hover:text-cyan-600 cursor-pointer" onclick="Login()">Log
+                        in</span></div>
+                <!--Changing to Sign in-->
+                <div class="hidden text-center text-zinc-500 py-2" id="signup">Don't have an account?<span
+                        class="ml-2 hover:text-cyan-600 cursor-pointer" onclick="SignUp()">Sign Up</span></div>
+                <p></p>
+            </div>
+        </form>
+    </main>
+    <script src="../JS/login.js"></script>
+</body>
+
+</html>
